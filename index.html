@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title" onclick="loadFav()">Follow RSS feeds</h1>
+      <nav class="header__nav">
+        <span class="header__nav__bookmarked" onclick="loadFav()">
+          Bookmarked articles
+          <i class="fas fa-star"></i>
+        </span>
+        <span class="header__nav__data" onclick="loadStorageOption()">
+          Storage options
+          <span class="storage__size"></span>
+          <i class="fas fa-server"></i>
+        </span>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="main__content"></div>
+      <aside class="aside">
+        <h2>Read an RSS feed</h2>
+      </aside>
+      <div class="popup"></div>
+    </main>
+    <div id="option">
+      <i class="fas fa-times option__close" onclick="closeStorageOption()"></i>
+      <div class="option__background">
+        <h2 class="option__title">Manage your storage data</h2>
+        <h3 class="option__subtitle">Your storage space</h3>
+        <p class="option__text">
+          Your current storage space is :
+          <span class="storage__size"></span>
+        </p>
+        <h3 class="option__subtitle">Clear your data</h3>
+        <p class="option__text">
+          You can clear your data(bookmarked articles and RSS feeds added)
+          here,<br />this cannot be reversed<br />
+          <button class="option__clearData" onclick="clearData()">
+            Clear data
+          </button>
+        </p>
+      </div>
+    </div>
+
+    <footer class="credit">Website made by <a href="https://mikgamer.fr">Michael Perard</a></footer>
+  </body>
+  <script src="src/js/data.js"></script>
+  <script src="src/js/aside.js"></script>
+  <script src="src/js/storage.js"></script>
+  <script src="src/js/script.js"></script>
+</html>
